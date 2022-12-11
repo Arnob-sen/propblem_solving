@@ -34,10 +34,10 @@ int main()
             }
             cost += c; // total city r cost
         }
-        cout << "Case " << i
+        /*.cout << "Case " << i
              << ":"
              << " ";
-        i++;
+        i++;/*/
         cout << min(need, cost - need) << endl; // eikane need mane j gula wrong path ase.hoy ami wrong path tik krbo.otherwise wrong gulare ek raika baki full city tik krbo.jetay kom cost oita ans
         //  cout << need << " " << cost;
     }
