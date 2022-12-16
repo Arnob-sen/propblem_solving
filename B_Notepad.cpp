@@ -3,35 +3,45 @@ using namespace std;
 typedef long long ll;
 void solve()
 {
-    ll n;
+    ll n, c = 0, x = 0;
     cin >> n;
     string s;
     cin >> s;
-    map<pair<char, char>, ll> mp;
-    pair<char, char> x = {s[0], s[1]};
-
-    mp[x]++;
-
-    ll c = 0;
-    for (ll i = 2; i < n; i++)
+    s[n] = '0';
+    map<string, ll> m;
+    if (n == 1)
     {
-        pair<char, char> y = {s[i - 1], s[i]};
-        if (mp[y] != 0)
-        {
-            if ((y == x && mp[y] > 1) || (y != x))
-            {
-                cout << "YES\n";
-                return;
-
-                c = 1;
-                break;
-            }
-        }
-        x = y;
-        mp[y]++;
+        cout << "NO\n";
+        return;
     }
 
-    cout << "NO\n";
+    for (ll i = 0; i < n; i++)
+    {
+        string a, b, c, d;
+        a = s[i];
+        b = s[i + 1];
+        c = s[i + 2];
+        d = s[i + 3];
+
+        if (a == b && b == c && d != c)
+        {
+
+            continue;
+        }
+
+        m[a + b]++;
+    }
+    for (auto x : m)
+        if (x.second > 1)
+        {
+            cout << "YES\n";
+            c = 1;
+            break;
+        }
+    if (c == 0)
+        cout << "NO\n";
+
+    // cout << endl;
 }
 
 int main()
