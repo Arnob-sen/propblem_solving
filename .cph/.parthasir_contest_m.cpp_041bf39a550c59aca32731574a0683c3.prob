@@ -1,0 +1,1 @@
+{"name":"Local: parthasir_contest_m","url":"d:\\propblem_solving\\parthasir_contest_m.cpp","tests":[{"id":1671812846237,"input":"5\n3 4 2 1 5\n5\n2 3 2 3 1\n0","output":"1 2 3 4 5\n1 2 2 3 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\propblem_solving\\parthasir_contest_m.cpp","group":"local","local":true}
