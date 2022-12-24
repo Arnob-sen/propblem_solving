@@ -1,0 +1,1 @@
+{"name":"Local: parthasir_contest_a","url":"d:\\propblem_solving\\parthasir_contest_a.cpp","tests":[{"id":1671882115617,"input":"3\n([])\n(([()])))\n([()[]()])()","output":"Yes\nNo\nYes"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\propblem_solving\\parthasir_contest_a.cpp","group":"local","local":true}
