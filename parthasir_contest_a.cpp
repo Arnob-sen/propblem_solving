@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+/*/#include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 
@@ -42,4 +42,43 @@ int main()
             cout << "No\n";
     }
 }
+/*/
 //([()[]()])()
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n, l, i;
+    string s;
+    cin >> n;
+    cin >> s;
+    stack<char> a;
+    l = s.length();
+    for (int j = 0; j < n; j++)
+    {
+        for (i = 0; i < l; i++)
+        {
+            if (s[i] == '(' || s[i] == '{' || s[i] == '[')
+            {
+                a.push(s[i]);
+            }
+            else if (s[i] == ')' || s[i] == '}' || s[i] == ']')
+            {
+                if (a.empty() == false && a.top() == s[i])
+                {
+                    a.pop();
+                }
+            }
+        }
+
+        if (a.empty() == true)
+        {
+            cout << "yes\n";
+        }
+        else
+            cout << "no\n";
+    }
+    return 0;
+}
