@@ -40,7 +40,5 @@ int main()
             cout << ans << ".0" << f << "$\n";
         else
             cout << ans << "." << f << "$\n";
-
-        // cout << setprecision(2) << fixed << (sum / 100.0) << "$" << endl;
     }
 }
