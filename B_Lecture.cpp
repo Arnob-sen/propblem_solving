@@ -13,8 +13,6 @@ int main()
     {
         cin >> a >> b;
         v.push_back({a, b});
-        // if(a.size()>=b.size())v.push_back(a);
-        // else v.push_back(b);
     }
     for (ll i = 0; i < n; i++)
     {
@@ -29,10 +27,7 @@ int main()
             if (s[i] == v[j].first || s[i] == v[j].second)
             {
                 ll x = v[j].first.size(), y = v[j].second.size();
-                // cout << x << " " << y << endl;
-                // break;
-                //  cout << v[i].first.size() << " " << v[i].second.size() << endl;
-                //   break;
+
                 if (x <= y)
                 {
 
