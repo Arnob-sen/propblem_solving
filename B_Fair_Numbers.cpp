@@ -1,34 +1,4 @@
-/*/
-#include <stdio.h>
-main()
-{
-    int t;
-    long long int a, k;
-    scanf("%d", &t);
-    while (t)
-    {
-        scanf("%lld", &a);
-        k = a;
-        while (k != 0)
-        {
-            if (k % 10 == 0)
-                k = k / 10;
-            else
-            {
-                if (a % (k % 10) == 0)
-                    k = k / 10;
-                else
-                {
-                    a++;
-                    k = a;
-                }
-            }
-        }
-        printf("%lld\n", a);
-        t--;
-    }
-}
-/*/
+
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
