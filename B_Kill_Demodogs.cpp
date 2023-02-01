@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+const int n1 = 1e9 + 7;
 typedef long long ll;
 
 int main()
@@ -11,17 +12,10 @@ int main()
     {
         ll n;
         cin >> n;
-        ll ans = 0, j = 1, c = 1;
-        for (ll i = 1; i <= n; i++)
-        {
-            ans += (i * i);
-            if (i == n)
-                break;
-
-            ans += (i * (i + 1));
-
-            // c = 1;
-        }
-        cout << (ans * 2022) << endl;
+        ll ans, j = 1, c = 1;
+        ans = ((((n * (n + 1)) % n1) * (4 * n - 1)) % n1 * 337) % n1;
+        cout
+            << (ans) << endl;
     }
 }
+//
