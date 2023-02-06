@@ -1,1 +1,1 @@
-{"name":"Local: dfs","url":"d:\\propblem_solving\\dfs.cpp","tests":[{"id":1670577891503,"input":"5 5\n1 2\n2 3\n1 4\n4 5 \n3 4\n1 ","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\propblem_solving\\dfs.cpp","group":"local","local":true}
+{"name":"Local: dfs","url":"d:\\propblem_solving\\dfs.cpp","tests":[{"id":1670577891503,"input":"5 5\n1 2\n2 3\n1 4\n4 5 \n3 4\n1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\propblem_solving\\dfs.cpp","group":"local","local":true}
