@@ -36,6 +36,7 @@ int main()
                 ans[j] = (sum + ans[j]) % MOD;
             }
         }
+
         cout << "Case " << t << ": " << ans[K] << endl;
     }
     return 0;
