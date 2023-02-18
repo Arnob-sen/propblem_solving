@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+ll dp[202][202],arr[202][202];
+
+const int MOD = 100000007;
+
+ll dynamic(ll a,ll b)
+{
+    ll ans1=0,ans2=0;
+    
+    if(arr[a][b]==0)return 0;
+    if(dp[a][b]!=-1)return dp[a][b];
+    ans1+=(dynamic(a+1,b)+arr[a][b]);
+    ans2+=(dynamic(a+1,b+1)+arr[a][b]);
+    dp[a][b]=max(ans1,ans2);
+    return max(ans1,ans2);
+    
+}
+
+int main()
+{
+    int T;
+    cin >> T;
+    for (int t = 1; t <= T; t++)
+    {
+        memset(dp,-1,sizeof(dp));
+        memset(arr,0,sizeof(arr));
+        
+        
+        ll n;
+        cin>>n;
+        for(ll i=1;i<=n;i++)
+        {
+            for(ll j=1;j<=i;j++)cin>>arr[i][j];
+        }
+        ll k=1;
+        for(ll i=n+1;i<=2*n-1;i++)
+        {
+            for(ll j=1+k;j<=n;j++)cin>>arr[i][j];
+            
+            k++;
+        }
+        
+        
+        cout<<"Case "<<t<<": "<<dynamic(1,1)<<endl;
+        
+        
+        
+    }
+}
