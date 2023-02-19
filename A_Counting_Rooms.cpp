@@ -33,7 +33,7 @@ int main()
             cin >> adjList[i][j];
     }
     memset(vis, 0, sizeof vis);
-    ans = 0;
+    ll ans = 0;
     for (ll i = 0; i < n; i++)
     {
         for (ll j = 0; j < m; j++)
