@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define MAXN 100000
+vector<vector<ll>> adjList(MAXN);
+vector<bool> vis(MAXN, false);
+
+ll ans=0;
+ll n, m;
+void dfs(ll node)
+{
+    vis[node] = true;
+    for (auto next : adjList[node])
+    {
+        if (vis[next] == false)
+        {
+            dfs(next);
+        }
+    }
+}
+int main()
+{
+    cin >> n ;
+    for(ll i=1;i<=n;i++){
+    ll x;
+    cin>>x;
+    adjList[x].push_back(i);
+    adjList[i].push_back(x);
+    }
+    for(ll i=1;i<=n;i++){
+    if(!vis[i])
+    {
+        ans++;
+        dfs(i);
+    }
+    }
+    cout<<ans<<endl;
+    }
