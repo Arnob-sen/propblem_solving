@@ -1,0 +1,65 @@
+#include <bits/stdc++.h>
+using namespace std;
+//#define int long long
+#define pb push_back
+typedef long long ll;
+#define IOS                           \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(0);                       \
+    cout.tie(0);
+
+
+
+int vis[10005], dis[100005];
+ll adj[1005][1005] = {0};
+ll c=0;
+void solve()
+{
+
+        ll n,q;
+        cin>>n>>q;
+        vector<ll>v;
+        for(ll i=0;i<n;i++){
+                ll z;
+                cin>>z;
+                v.pb(z);
+        }
+        cout<<"Case "<<++c<<":"<<endl;
+        while(q--)
+        {
+
+                char d;
+                int x;
+                cin>>d>>x;
+                if(d=='a'){v.pb(x);
+
+                //cout<<v.size()<<endl;
+                }
+                else {
+                                if(x>v.size()){
+                                                cout<<"none\n";
+
+                                continue;
+                                }
+                else{
+                        auto ans=v.begin()+x-1;
+                        cout<<*ans<<endl;
+                        v.erase(ans);
+                       // cout<<v.size()<<endl;
+                }
+                }
+        }
+
+}
+signed main()
+{
+    IOS;
+
+    int t = 1;
+     cin>>t;
+    while (t--)
+    {
+        solve();
+        // cout<<'\n';
+    }
+}
