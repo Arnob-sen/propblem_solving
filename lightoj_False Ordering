@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int mx=1e3+1;
+//vector<bool> p(MAXN, false);
+// vector<ll> dp;
+#define fastio                            \
+    {                                     \
+        ios_base::sync_with_stdio(false); \
+        cin.tie(NULL);                    \
+    }
+    pair<int,int>pre[mx+2];
+    bool compare(pair<int,int> x,pair<int,int>y)
+    {
+        if(x.second==y.second)return x.first>y.first;
+
+        return x.second<y.second;
+    }
+    void solve()
+    {
+        for(int i=1;i<=mx;i++)
+        {
+            pre[i].first=i;
+            for(int j=i; j<=mx;j+=i){
+                pre[j].second++;
+            }
+        }
+        sort(pre,pre+mx,compare);
+
+        return;
+
+
+
+
+    }
+    int main()
+    {
+        solve();
+        fastio
+        int t;
+        cin>>t;
+        int c=0;
+        while(t--)
+        {
+            int n;
+            cin>>n;
+            cout<<"Case "<<++c<<": "<<pre[n].first<<endl;
+           // for(int i=1;i<=mx;i++)cout<<pre[i].first<<" ";
+
+              //  cout<<endl;
+        }
+        return 0;
+
+    }
