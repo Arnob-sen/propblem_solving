@@ -1,0 +1,36 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int mx=1e6;
+vector<bool> p(mx, false);
+// vector<ll> dp;
+double pre[mx+1];
+#define fastio                            \
+    {                                     \
+        ios_base::sync_with_stdio(false); \
+        cin.tie(NULL);                    \
+    }
+ll ans1 = 0, ans2 = 0;
+ll gcd(ll a, ll b)
+{
+    if (b == 0)
+        return a;
+    else
+        return gcd(b, a % b);
+}
+int main()
+{
+    for(ll i=1;i<=mx;i++)pre[i]=pre[i-1]+log(i);
+    fastio
+        ll c = 0,
+           t;
+    cin >> t;
+    while (t--)
+    {
+        ll n,b;
+        cin >> n>>b;
+        ll ans=(pre[n]/log(b))+1;
+        cout<<"Case "<<++c<<": "<<ans<<endl;
+    }
+}
