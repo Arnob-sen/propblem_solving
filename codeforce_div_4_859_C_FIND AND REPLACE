@@ -1,0 +1,63 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+#define int long long
+#define pb push_back
+#define F first
+#define S second
+#define ll long long
+#define ull unsigned long long
+#define ld long double
+#define pii pair<int, int>
+#define vi vector<int>
+#define vii vector<pii>
+#define vc vector
+vector<ll> parent;
+
+const ll inf = 1e18;
+const ld ep = 0.0000001;
+const ld pi = acos(-1.0);
+const ll md = 1000000007;
+
+int vis[10005], dis[100005];
+ll adj[1005][1005] = {0};
+#define fastio                            \
+    {                                     \
+        ios_base::sync_with_stdio(false); \
+        cin.tie(NULL);                    \
+    }
+
+signed main()
+{
+    fastio
+        ll t;
+    cin >> t;
+    while (t--)
+    {
+        ll n;
+        cin >> n;
+        string s;
+        cin >> s;
+        ll c = 0;
+        for (ll i = 0; i < n - 1; i++)
+        {
+            for (ll j = i + 1; j < n; j++)
+            {
+                if (s[i] == s[j])
+                {
+                    if (j % 2 != i%2)
+                    {
+                        // cout << "NO\n";
+                        c = 1;
+                        break;
+                    }
+                }
+            }
+        }
+        if (c == 0)
+            cout << "YES\n";
+        else
+            cout << "NO\n";
+    }
+}
