@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int mx=1e3+1;
+//vector<bool> p(MAXN, false);
+// vector<ll> dp;
+#define fastio                            \
+    {                                     \
+        ios_base::sync_with_stdio(false); \
+        cin.tie(NULL);                    \
+    }
+    int main()
+    {
+        
+        fastio
+         
+            ll n;
+            cin>>n;
+            if(n==3){
+            	cout<<"aab";
+            	return 0;
+            }
+            if(n%2==0)
+            for(ll i=0;i<n/2;i++){
+            	if(i%2)cout<<"bb";
+            	else cout<<"aa";
+            }
+            else {
+            	for(ll i=0;i<(n-1)/2;i++)
+        	{
+        			if(i%2)cout<<"bb";
+            	else cout<<"aa";
+        	}
+            if((n-1)/2%2)	
+            	cout<<"b";
+            	else cout<<"a";
+            }
+    }
