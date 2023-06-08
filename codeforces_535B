@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define fastio                            \
+    {                                     \
+        ios_base::sync_with_stdio(false); \
+        cin.tie(NULL);                    \
+    }
+    int main()
+    {
+    	ll n;
+    	cin>>n;
+    	ll res=0,pos=1;
+    	while(n)
+    	{
+    		if(n%10==4)res+=pos;
+    		else res+=2*pos;
+    		pos*=2;
+    		n/=10;
+    	}
+    	cout<<res<<endl;
+    }
