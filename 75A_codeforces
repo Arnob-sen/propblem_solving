@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define fastio                            \
+    {                                     \
+        ios_base::sync_with_stdio(false); \
+        cin.tie(NULL);                    \
+    }
+ 
+// #define inf 1e12
+ll remove(ll num)
+{
+	ll res=0,dig=1;
+	while(num)
+	{
+		if(num%10){
+		res+=(dig*(num%10));
+		
+	
+		dig*=10;
+		}
+			num/=10;
+	}
+	return res;
+}
+int main()
+{
+	ll a,b;
+	cin>>a>>b;
+	ll c=a+b;
+	ll x=remove(a);
+	ll y=remove(b);
+	ll z=remove(c);
+	if(x+y==z)cout<<"YES";
+	else cout<<"NO\n";
+	
+	
+}
