@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int main() {
+	ll n,t;
+	cin>>n>>t;
+	ll arr[n+1];
+	for(ll i=0;i<n;i++)cin>>arr[i];
+	
+	ll c=0,sum=0,ans=0;
+
+	for(ll i=0;i<n;i++)
+	{
+		while(c<n&&arr[c]+sum<=t)
+		{
+			sum+=arr[c];
+				c++;
+		}
+		ans=max(ans,c-i);
+		sum-=arr[i];
+		//c=0;
+		
+		
+	}
+	
+	
+	cout<<ans<<endl;
+	// your code goes here
+	return 0;
+}
